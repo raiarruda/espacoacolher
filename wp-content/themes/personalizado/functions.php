@@ -23,7 +23,9 @@
             'labels'                => $labels_profissional, 
             'description'           => ( 'Profissionais da Clínica Espaço Acolher'),
             'menu_icon'             => ( 'dashicons-businesswoman'),
-            'supports'              => array( 'title', 'editor', 'thumbnail')
+            'supports'              => array( 'title', 'editor', 'thumbnail'),
+            'show_in_rest'          => true
+
         );
 
         register_post_type('profissional', $args_profissional);
@@ -52,7 +54,9 @@
             'labels'                => $labels_convenio, 
             'description'           => ( 'Convênios credenciados a Clínica Espaço Acolher'),
             'menu_icon'             => ( 'dashicons-admin-page'),
-            'supports'              => array( 'title', 'thumbnail')
+            'supports'              => array( 'title', 'thumbnail'),
+            'show_in_rest'          => true
+
         );
 
         register_post_type('convenio', $args_convenio);
@@ -82,7 +86,8 @@
             'labels'                => $labels_servicos, 
             'description'           => ( 'Serviços oferecidos pela Clínica Espaço Acolher'),
             'menu_icon'             => ( 'dashicons-forms'),
-            'supports'              => array( 'title', 'editor','thumbnail')
+            'supports'              => array( 'title', 'editor','thumbnail'),
+            'show_in_rest'          => true
         );
 
         register_post_type('sevicos', $args_servicos);
