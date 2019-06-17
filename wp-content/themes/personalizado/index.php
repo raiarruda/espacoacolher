@@ -10,12 +10,19 @@
 
     </head>
     <body> 
+    <?php 
+        $args = array( 
+        'orderby' => 'title',
+        'post_type' => 'convenio',
+        );
+        $the_query = new WP_Query( $args );
+        ?>
       
         <div class="row">
-        <?php if (have_posts()) :
-        while (have_posts()) : ?>
+        <?php if ( $the_query->have_posts()) :
+        while ( $the_query->have_posts()) : 
+            $the_query->the_post();?>
             <div class="col-3 m-3">
-              <?php the_post(); ?>
                 <h1><?=the_title()?></h1>
                <div class="img-thumbnail"> <?php the_post_thumbnail(); ?> </div>
                 <article> <?=the_content()?></article>
@@ -23,8 +30,10 @@
                    
              </div>
         <?php endwhile;
-            endif; 
-            ?>
+            // else:?>
+            <!-- <p>Não tem nenhum convenio cadastrado</p> -->
+            <?php endif;
+            wp_reset_query();      ?>
         </div>
 
 
