@@ -10,6 +10,7 @@
 
     </head>
     <body> 
+    <a href="convenio.php">link convenio</a>
     <?php 
         $args = array( 
         'orderby' => 'title',
