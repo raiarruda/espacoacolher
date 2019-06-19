@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -18,6 +19,10 @@
     </head>
     <body> 
     <a href="convenio.php">link convenio</a>
+=======
+<?php get_header();?>
+    
+>>>>>>> 4f03840227a6352e898d8d385f80a5ec5e09cfae
     <?php 
         $args = array( 
         'orderby' => 'title',
