@@ -1,6 +1,7 @@
 <?php 
-    add_theme_support('post-thumbnails');
+ 
     function cadastrando_post_type_especificos(){
+       
     
         $labels_profissional = array(
             'name'                  => ( 'Profissionais' ),
