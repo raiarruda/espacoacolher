@@ -26,8 +26,7 @@
 
 <body class="index-page sidebar-collapse">
     <header>
-        <!--    navbar come here          -->
-
+  
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
             <div class="container">
                 <a class="navbar-brand" href="#">DuplaProgrameira</a>
