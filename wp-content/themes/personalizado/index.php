@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="<?=$home;?>/style.css" type="text/css" rel="stylesheet">
-
+    <link href="<?=$home;?>/paper-kit.css" type="text/css" rel="stylsheet">
     <style>
         .teste {
             width: 10rem;
@@ -35,10 +35,10 @@
 
 <body>
 
-    <body class="container">
-        <header>
+    <body>
+        <header class="m-4">
 
-            <nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="100">
+            <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="#">DuplaProgrameira</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar"
@@ -73,6 +73,11 @@
             </nav>
 
         </header>
+        <div class="page-header section-dark">
+            <div class="filter"></div>
+
+                      
+        </div>
 
         <section id="inicial" class="sessao">
             <div class="row">
@@ -126,28 +131,28 @@ $the_query = new WP_Query($args);
     while ($the_query->have_posts()):
         $the_query->the_post();?>
 
-                <div class="col">
-                    <div class="card card-profile card-plain">
+		                <div class="col">
+		                    <div class="card card-profile card-plain">
 
-                        <div class="col">
-                            <div class="card-image">
-                                <img class="teste img-fluid" src="<?=the_post_thumbnail_url();?>">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="content">
-                                <h4 class=""><?=the_title();?></h4>
-                                <h6 class="">CEO</h6>
-                                <p class=""><?=the_content();?></p>
-                            </div>
-                        </div>
+		                        <div class="col">
+		                            <div class="card-image">
+		                                <img class="teste img-fluid" src="<?=the_post_thumbnail_url();?>">
+		                            </div>
+		                        </div>
+		                        <div class="col">
+		                            <div class="content">
+		                                <h4 class=""><?=the_title();?></h4>
+		                                <h6 class="">CEO</h6>
+		                                <p class=""><?=the_content();?></p>
+		                            </div>
+		                        </div>
 
-                    </div>
-                </div>
+		                    </div>
+		                </div>
 
 
 
-                <?php endwhile;
+		                <?php endwhile;
 endif;
 wp_reset_query();?>
             </div>
@@ -167,18 +172,18 @@ $the_query = new WP_Query($args);
             <?php if ($the_query->have_posts()):
     while ($the_query->have_posts()):
         $the_query->the_post();?>
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <img class="teste img-fluid" src="<?=the_post_thumbnail_url();?>" alt="<?=the_title();?>">
-                        </div>
-                        <div class="col">
-                            <img src="https://via.placeholder.com/234x60?text=234x60+Half+Banner" alt="convenio">
-                        </div>
-                    </div>
-                    <?php endwhile;?>
-                    <?php endif;
+		            <div class="row">
+		                <div class="col">
+		                    <div class="row">
+		                        <div class="col">
+		                            <img class="teste img-fluid" src="<?=the_post_thumbnail_url();?>" alt="<?=the_title();?>">
+		                        </div>
+		                        <div class="col">
+		                            <img src="https://via.placeholder.com/234x60?text=234x60+Half+Banner" alt="convenio">
+		                        </div>
+		                    </div>
+		                    <?php endwhile;?>
+	                    <?php endif;
 wp_reset_query();
 ?>
 
@@ -189,6 +194,13 @@ wp_reset_query();
 
         </footer>
     </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="  crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="<?=$home?>/bootstrap.js"></script>
+    <script type="text/javascript" src="<?=$home?>/paper-kit.js"></script>
+
     <?php wp_footer();?>
 
 </html>
