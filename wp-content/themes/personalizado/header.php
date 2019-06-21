@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 
-    <link href="<?=$home;?>/assets/css/reset.css" type="text/css" rel="stylesheet">
+    
     <link href="<?=$home;?>/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="<?=$home;?>/assets/css/paper-kit.min.css" type="text/css" rel="stylsheet">
+    <link href="<?=$home;?>/paper-kit.css" type="text/css" rel="stylsheet">
+
     <link href="<?=$home;?>/style.css" type="text/css" rel="stylesheet">
 
 </head>
